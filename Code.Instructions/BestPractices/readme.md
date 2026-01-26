@@ -8,3 +8,4 @@ Best Practises:
 - [Begin as an afterword](./BeginAsAnAfterword)
 - [Begin-End - Compound Only](./BeginEndCompoundOnly)
 - [Binary Operator to Start Line](./BinaryOperatorToStartLine)
+- [Blank Lines](./BlankLines)
