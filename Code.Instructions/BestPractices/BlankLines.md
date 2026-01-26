@@ -4,6 +4,7 @@ Do not use blank lines:
 - at the beginning or end of any functions (after `begin` and before `end`)
 - inside multiline expression
 - after blank lines
+
 ## Example 1
 ### ❌ Bad code
 ```al

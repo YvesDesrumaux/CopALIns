@@ -9,3 +9,4 @@ Best Practises:
 - [Begin-End - Compound Only](./BeginEndCompoundOnly)
 - [Binary Operator to Start Line](./BinaryOperatorToStartLine)
 - [Blank Lines](./BlankLines)
+- [CASE Action on next line](./CaseAction)
