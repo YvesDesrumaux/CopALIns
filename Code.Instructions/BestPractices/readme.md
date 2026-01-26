@@ -7,3 +7,4 @@ Best practices are mostly of 2 differents types :
 Best Practises:
 - [Begin as an afterword](./BeginAsAnAfterword)
 - [Begin-End - Compound Only](./BeginEndCompoundOnly)
+- [Binary Operator to Start Line](./BinaryOperatorToStartLine)
