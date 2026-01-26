@@ -10,3 +10,5 @@ Best Practises:
 - [Binary Operator to Start Line](./BinaryOperatorToStartLine)
 - [Blank Lines](./BlankLines)
 - [CASE Action on next line](./CaseAction)
+- [Comment Spacing](./CommentSpacing)
+- [End else pair](./EndElsePair)
