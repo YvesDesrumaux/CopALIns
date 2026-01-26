@@ -22,6 +22,7 @@ Best Practises:
 - [Object File Naming](./ObjectFileNaming)
 - [Object Naming](./ObjectNaming)
 - [Objects Prefix](./ObjectsPrefix)
+- [One Object per File](./OneObjectPerFile)
 - [One Statement per Line](./OneStatementPerLine)
 - [Seperate if and else](./SeperateIfAndElse)
 - [Spacing Binary Operators](./SpacingBinaryOperators)
