@@ -1,0 +1,6 @@
+title: Bricklead AL Guidelines
+description: Bricklead AL Guidelines
+markdown: kramdown
+kramdown:
+  toc_levels: 1..6
+  input: GFM           # compatibilité GitHub Flavored Markdown
