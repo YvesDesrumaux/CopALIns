@@ -12,3 +12,4 @@ Best Practises:
 - [CASE Action on next line](./CaseAction)
 - [Comment Spacing](./CommentSpacing)
 - [End else pair](./EndElsePair)
+- [If not then exit](./IfNotThenExit)
