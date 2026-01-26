@@ -1,12 +1,8 @@
 # IsTemporary record safeguard
 ## Description
-When you are working with temporary tables or real tables, you can have code, where you assume that Record variable is or is not temporary. Best practice is to not assume, but test it to be sure. In history,
-many developers went through painful period when they did unwanted "DeleteAll" over real table in production database, because they were only assuming something (mostly it happened only once to them).
-
-Therefore it is good practice to use 'Record.IsTemporary()' method to test this predicate, mainly when you are doing destructive action.
-
-Another case when it is good practice to use this test is when you are subscribing to triggers on table. In most cases, you do not want to run your code when the trigger is running over temporary record. And you cannot assume, that
-this specific table will not be used as temporary by someone else. Reacting to the trigger as if it was triggered by real table change could lead to corrupted data or unpredictable errors and the reason could be hard to find.
+- When you are working with temporary tables or real tables, you can have code, where you assume that Record variable is or is not temporary. Best practice is to not assume, but test it to be sure. In history.
+- Therefore it is good practice to use 'Record.IsTemporary()' method to test this predicate, mainly when you are doing destructive action.
+- Another case when it is good practice to use this test is when you are subscribing to triggers on table. In most cases, you do not want to run your code when the trigger is running over temporary record. And you cannot assume, that this specific table will not be used as temporary by someone else. Reacting to the trigger as if it was triggered by real table change could lead to corrupted data or unpredictable errors and the reason could be hard to find.
 
 ## ❌ Bad code
 ```al
