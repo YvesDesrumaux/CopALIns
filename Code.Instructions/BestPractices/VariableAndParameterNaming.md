@@ -7,7 +7,9 @@
 - Blanks, periods, and other characters (such as parentheses) that would make quotation marks around a variable necessary must be omitted.
 
 ### Record Variables
-Names of variables and parameters of type `Record` should be suffixed with the table name without whitespaces. For multiple variables of the same record type, use meaningful suffixes.
+- Names of variables and parameters of type `Record` should be suffixed with the table name without whitespaces.
+- For multiple variables of the same record type, use meaningful suffixes.
+- Use prefix 'Temp' for temporary records
 
 ### ✅ Good code
 ```al
@@ -17,6 +19,7 @@ var
     Customer: Record Customer;
     SalesHeader: Record "Sales Header";
     SalesLine: Record "Sales Line";
+    TempSalesLine: Record "Sales Line" temporary;
 begin
     // Implementation
 end;

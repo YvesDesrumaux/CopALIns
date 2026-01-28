@@ -49,7 +49,7 @@ Complete page creation templates including:
 ### [Codeunit Templates](./codeunit-template.al)
 Two comprehensive codeunit patterns:
 
-#### Management Codeunit (`[Prefix] [EntityName] Mgt`)
+#### Management Codeunit (`[Prefix]_[EntityName]Mgt`)
 - ✅ **CRUD operations** with validation and error handling
 - ✅ **Business logic procedures** following Single Responsibility Principle
 - ✅ **Event publishers** for extensibility (OnBefore/OnAfter patterns)
@@ -57,7 +57,7 @@ Two comprehensive codeunit patterns:
 - ✅ **Batch processing** with progress indication
 - ✅ **Statistics and helper functions**
 
-#### Workflow Codeunit (`[Prefix] [EntityName] Workflow`)
+#### Workflow Codeunit (`[Prefix]_[EntityName]Workflow`)
 - ✅ **Multi-stage workflow processing** with comprehensive error handling
 - ✅ **Business event patterns** for major functionality
 - ✅ **Integration events** for external system connectivity

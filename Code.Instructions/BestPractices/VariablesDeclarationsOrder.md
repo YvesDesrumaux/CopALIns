@@ -15,6 +15,7 @@ Variables declarations should be ordered by type. In general, object and complex
 - RecordRef
 - FieldRef
 - FilterPageBuilder
+- Other types (Text, Integer, Decimal, etc.)
 
 (Ref: [Microsoft Docs](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/analyzers/codecop-aa0021))
 

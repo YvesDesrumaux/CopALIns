@@ -13,11 +13,13 @@ Best Practises:
 - [Comment Spacing](./CommentSpacing)
 - [End else pair](./EndElsePair)
 - [If not then exit](./IfNotThenExit)
+- [Implement Proper Transaction Handling(./ImplementProperTransactionHandling)]
 - [IsTemporary record safeguard](./IsTemporaryRecordSafeguard)
 - [Keyword Pairs Indentation](./KeywordPairsIndentation)
 - [Line Start Keywords](./LineStartKeywords)
 - [Lonely Repeat](./LonelyRepeat)
 - [Named Invocations](./NamedInvocations)
+- [Nested IF-THEN-ELSE](./NestedIfThenElse.md)
 - [Numbering](./Numbering)
 - [Object File Naming](./ObjectFileNaming)
 - [Object Naming](./ObjectNaming)
