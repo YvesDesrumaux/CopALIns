@@ -16,4 +16,5 @@ In the sections bellow, we describe some rules, best pratices and examples havin
   - high-performance
   - complies with good designs
   - has high maintainability
+- [➡️ Performance](./Performance/) This section will cover the performance subjects of an AL extensions.
 - [➡️ Examples](./Examples/) This section will give some good code example.
