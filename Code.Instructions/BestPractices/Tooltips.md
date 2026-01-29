@@ -1,7 +1,7 @@
 # Tooltips
 # Description
 - All fields should have tooltips to provide context and guidance to users
-- Use the Tooltip property in AL to define tooltips for fields, actions, and controls
+- Use the `Tooltip` property in AL to define tooltips for fields, actions, and controls
 - Ensure tooltips are concise and informative, helping users understand the purpose and usage of each field or action
 - Avoid overly technical jargon in tooltips; aim for clarity and simplicity
 - Use consistent terminology and phrasing across tooltips to maintain a cohesive user experience

@@ -49,7 +49,7 @@ end;
 procedure ProcessCustomerRatings()
 var
     Customer: Record Customer;  // Base table
-    CustomerRating: Record "ABC Customer Rating";  // Extension table
+    CustomerRating: Record "abcABC_CustomerRating";  // Extension table
     TempCustomerSummary: Record "Customer Summary" temporary;
 begin
     // Rating processing logic

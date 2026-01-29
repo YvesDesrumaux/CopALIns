@@ -1,7 +1,7 @@
 # Comment Spacing
 ## Description
 - Add comments to explain complex logic or business rules
-- Document the purpose of procedures, parameters, and return values
+- Document the purpose of procedures, parameters, and return values on public and complex procedure
 - Always start comments with // followed by one space character.
 ## ❌ Bad code
 ```al

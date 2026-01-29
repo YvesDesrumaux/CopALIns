@@ -13,5 +13,5 @@ tableextension 50100 CustomerExt extends Customer
 ```
 ### ✅ Good code
 ```al
-tableextension 50100 briAAA_CustomerExt extends Customer
+tableextension 50100 abcABC_Customer extends Customer
 ```

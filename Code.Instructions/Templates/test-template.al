@@ -2,7 +2,7 @@
 // Copy this template and replace placeholders with your specific values
 // Following TestingValidation standards and test data patterns
 
-codeunit [ObjectID] "X [Prefix]_[EntityName] Tests"
+codeunit [ObjectID] [Prefix]=[EntityName]Tests
 {
     Subtype = Test;
     TestPermissions = Disabled;

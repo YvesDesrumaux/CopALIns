@@ -2,7 +2,7 @@
 // Copy this template and replace placeholders with your specific values
 // Following SharedGuidelines naming conventions and page layout standards
 
-page [ObjectID] "[Prefix]_[EntityName] Card"
+page [ObjectID] [Prefix]_[EntityName]Card
 {
     Caption = '[EntityName] Card';
     PageType = Card;
@@ -85,6 +85,7 @@ page [ObjectID] "[Prefix]_[EntityName] Card"
             action(Activate)
             {
                 Caption = 'Activate';
+                Tooltip = 'Activate this record.';
                 Image = Approve;
                 ApplicationArea = All;
                 Enabled = Rec.Status <> Rec.Status::Active;
@@ -99,6 +100,7 @@ page [ObjectID] "[Prefix]_[EntityName] Card"
             action(Inactivate)
             {
                 Caption = 'Inactivate';
+                Tooltip = 'Inactivate this record.';
                 Image = Cancel;
                 ApplicationArea = All;
                 Enabled = Rec.Status = Rec.Status::Active;
@@ -115,6 +117,7 @@ page [ObjectID] "[Prefix]_[EntityName] Card"
             action(Copy)
             {
                 Caption = 'Copy';
+                Tooltip = 'Create a copy of this record.';
                 Image = Copy;
                 ApplicationArea = All;
 
@@ -136,6 +139,7 @@ page [ObjectID] "[Prefix]_[EntityName] Card"
             action(RelatedRecords)
             {
                 Caption = 'Related Records';
+                Tooltip = 'View related records for this entity.';
                 Image = List;
                 ApplicationArea = All;
                 RunObject = page "[Related Records Page]";
@@ -144,6 +148,7 @@ page [ObjectID] "[Prefix]_[EntityName] Card"
             action(History)
             {
                 Caption = 'History';
+                Tooltip = 'View the change history for this record.';
                 Image = History;
                 ApplicationArea = All;
                 // Link to change log or audit trail if available
@@ -154,6 +159,7 @@ page [ObjectID] "[Prefix]_[EntityName] Card"
             action(PrintRecord)
             {
                 Caption = 'Print';
+                Tooltip = 'Print this record.';
                 Image = Print;
                 ApplicationArea = All;
 
@@ -208,7 +214,7 @@ page [ObjectID] "[Prefix]_[EntityName] Card"
 }
 
 // List Page Template
-page [ObjectID] "[Prefix]_[EntityName] List"
+page [ObjectID] [Prefix]_[EntityName]List
 {
     Caption = '[EntityName] List';
     PageType = List;
@@ -271,6 +277,7 @@ page [ObjectID] "[Prefix]_[EntityName] List"
             action(New)
             {
                 Caption = 'New';
+                Tooltip = 'Create a new [EntityName] record.';
                 Image = New;
                 ApplicationArea = All;
                 RunObject = page "[Prefix]_[EntityName] Card";
@@ -279,6 +286,7 @@ page [ObjectID] "[Prefix]_[EntityName] List"
             action(BulkActivate)
             {
                 Caption = 'Bulk Activate';
+                Tooltip = 'Activate selected records.';
                 Image = Approve;
                 ApplicationArea = All;
 
@@ -303,6 +311,7 @@ page [ObjectID] "[Prefix]_[EntityName] List"
             action(PrintList)
             {
                 Caption = 'Print List';
+                Tooltip = 'Print the list of [EntityName] records.';
                 Image = Print;
                 ApplicationArea = All;
 
@@ -317,6 +326,7 @@ page [ObjectID] "[Prefix]_[EntityName] List"
             action(ExportToExcel)
             {
                 Caption = 'Export to Excel';
+                Tooltip = 'Export the list of [EntityName] records to Excel.';
                 Image = Export;
                 ApplicationArea = All;
 

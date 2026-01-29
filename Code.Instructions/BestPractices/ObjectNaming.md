@@ -5,6 +5,7 @@
 - Avoid abbreviations unless they names are too long (max 30 caracters including prefix)
 - Be consistent with naming patterns throughout the codebase
 - Blanks, periods, and other characters (such as parentheses) that would make quotation marks around a variable necessary must be omitted.
+- Boolean should be named with a positive assertion (e.g., "IsComplete" not "NotComplete")
 
 ### Tables and Fields
 - Table names should be singular nouns
@@ -19,7 +20,7 @@
 ### Codeunits
 - Codeunits implementing business logic should be named after the functionality they provide
 - Utility codeunits should have a suffix indicating their purpose (e.g., "Mgt" for management)
-- Event subscriber codeunits should have "Event Subscribers" in their name
+- Event subscriber codeunits should have "EventSubscribers" in their name
 
 ### Reports
 - Report names should clearly indicate their purpose and output

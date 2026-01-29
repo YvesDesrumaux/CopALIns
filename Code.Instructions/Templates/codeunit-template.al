@@ -2,7 +2,7 @@
 // Copy this template and replace placeholders with your specific values
 // Following SharedGuidelines standards for business logic and event patterns
 
-codeunit [ObjectID] "[Prefix]_[EntityName]Mgt"
+codeunit [ObjectID] [Prefix]_[EntityName]Mgt
 {
     // Management codeunit for [EntityName] operations
     // Use this template for small to medium functionality
@@ -12,22 +12,19 @@ codeunit [ObjectID] "[Prefix]_[EntityName]Mgt"
         Handled: Boolean;
     begin
         OnBeforeCreate[EntityName]([EntityName], [KeyParameters], Handled);
-        DoCreate[EntityName]([EntityName], [KeyParameters], Handled);
+        if Handled then
+            exit;
+        DoCreate[EntityName]([EntityName], [KeyParameters]);
         OnAfterCreate[EntityName]([EntityName]);
         exit(Handled);
     end;
 
-    local procedure DoCreate[EntityName](var [EntityName]: Record "[Prefix]_[EntityName]"; [KeyParameters]: Text; var Handled: Boolean)
+    local procedure DoCreate[EntityName](var [EntityName]: Record "[Prefix]_[EntityName]"; [KeyParameters]: Text)
     begin
-        if Handled then
-            exit;
-
         [EntityName].Init();
         [EntityName]."No." := GetNextNumber();
         [EntityName].Description := [KeyParameters];
         [EntityName].Insert(true);
-
-        Handled := true;
     end;
 
     procedure Validate[EntityName](var [EntityName]: Record "[Prefix]_[EntityName]"): Boolean
@@ -241,7 +238,7 @@ codeunit [ObjectID] "[Prefix]_[EntityName]Mgt"
 }
 
 // Major Functionality Codeunit Template
-codeunit [ObjectID] "[Prefix]_[EntityName] Workflow"
+codeunit [ObjectID] [Prefix]_[EntityName]Workflow
 {
     // Major functionality codeunit with comprehensive workflow patterns
     // Use this template for complex business processes

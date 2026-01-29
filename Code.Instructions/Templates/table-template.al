@@ -2,18 +2,17 @@
 // Copy this template and replace placeholders with your specific values
 // Following SharedGuidelines naming conventions and standards
 
-table [ObjectID] "[Prefix]_[EntityName]"
+table [ObjectID] [Prefix]_[EntityName]
 {
     Caption = '[EntityName]';
     DataClassification = CustomerContent;  // or ToBeClassified based on data sensitivity
-    LookupPageId = "[Prefix]_[EntityName] List";
-    DrillDownPageId = "[Prefix]_[EntityName] List";
+    LookupPageId = "[Prefix]_[EntityName]List";
+    DrillDownPageId = "[Prefix]_[EntityName]List";
 
     fields
     {
         field(1; "No."; Code[20])
         {
-            Caption = 'No.';
             Tooltip = 'Specifies the number of the [entity].';
             NotBlank = true;
 
@@ -25,19 +24,16 @@ table [ObjectID] "[Prefix]_[EntityName]"
         }
         field(2; Description; Text[100])
         {
-            Caption = 'Description';
             Tooltip = 'Specifies the description of the [entity].';
             NotBlank = true;
         }
         field(3; "Created Date"; Date)
         {
-            Caption = 'Created Date';
             Tooltip = 'Specifies when the [entity] was created.';
             Editable = false;
         }
         field(4; "Created By"; Code[50])
         {
-            Caption = 'Created By';
             Tooltip = 'Specifies who created the [entity].';
             DataClassification = EndUserIdentifiableInformation;
             TableRelation = User."User Name";
@@ -45,7 +41,6 @@ table [ObjectID] "[Prefix]_[EntityName]"
         }
         field(5; Status; Enum "[Prefix]_[EntityName] Status")
         {
-            Caption = 'Status';
             Tooltip = 'Specifies the status of the [entity].';
 
             trigger OnValidate()
@@ -63,7 +58,7 @@ table [ObjectID] "[Prefix]_[EntityName]"
         // FlowField example for calculated data
         field(10; "Related Records Count"; Integer)
         {
-            Caption = 'Related Records Count';
+            Caption = 'Records Count';
             Tooltip = 'Specifies the number of related records for this [entity].';
             FieldClass = FlowField;
             CalcFormula = count("[Related Table]" where("[Key Field]" = field("No.")));
@@ -77,14 +72,8 @@ table [ObjectID] "[Prefix]_[EntityName]"
         {
             Clustered = true;
         }
-        key(Description; Description)
-        {
-            // Secondary key for sorting and filtering
-        }
-        key(Status; Status, "Created Date")
-        {
-            // Composite key for status-based queries
-        }
+        key(Description; Description) { }
+        key(Status; Status, "Created Date") { }
     }
 
     fieldgroups
@@ -119,7 +108,7 @@ table [ObjectID] "[Prefix]_[EntityName]"
 
     trigger OnRename()
     begin
-        Error('You cannot rename a %1.', TableCaption);
+        Error('You cannot rename a %1.', TableCaption); // depending of bussiness rules
     end;
 
     var
@@ -165,8 +154,8 @@ table [ObjectID] "[Prefix]_[EntityName]"
     end;
 }
 
-// Enum template for status field
-enum [ObjectID] "[Prefix]_[EntityName] Status"
+// Enum template for status field in a different file
+enum [ObjectID] [Prefix]_[EntityName]Status
 {
     Extensible = true;
 
