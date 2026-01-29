@@ -71,6 +71,12 @@ Complete page creation templates including:
 - FactBox integration for additional information
 - Style expressions for visual indicators
 
+#### API Page
+- `ApplicationArea`, `Caption`, `UsageCategory` properties are not requiered on API Pages
+- Control names in API pages use camelCase
+- `Extensible = false;` is always present in header page properties
+- Groups are not allowed
+
 **Usage:**
 1. Copy the relevant page template
 2. Replace `[ObjectID]`, `[Prefix]`, `[EntityName]` with your values
