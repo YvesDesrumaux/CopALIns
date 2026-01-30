@@ -5,3 +5,4 @@ This section will cover patterns that solve certain design challenges in Busines
 Code Design Patterns:
 - [Event Based Integration](./EventBasedIntegration.md)
 - [General Design Patterns](./General.md)
+- [Interfaces](./Interfaces.md)
