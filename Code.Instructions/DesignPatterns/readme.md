@@ -6,3 +6,4 @@ Code Design Patterns:
 - [Event Based Integration](./EventBasedIntegration.md)
 - [General Design Patterns](./General.md)
 - [Interfaces](./Interfaces.md)
+- [Project Structure Rules](./ProjectStructureRules.md)
