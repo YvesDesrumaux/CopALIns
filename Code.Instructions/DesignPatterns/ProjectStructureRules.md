@@ -174,7 +174,7 @@ AppTest/
 └── Common/
     └── TestHelpers/
         └── TestDataFactory.Codeunit.al
-``` 
+```
 ## Modular and Reusable Code Structure
 Keep code modular and reusable to enhance maintainability and reduce duplication. Write small, focused procedures that do one thing well and use interfaces and patterns where appropriate.
 
@@ -206,4 +206,4 @@ begin
   // All validation, calculation, and posting logic in one procedure
   // ... 200+ lines of mixed concerns
 end;
-``` 
+```
