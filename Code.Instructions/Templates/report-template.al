@@ -159,8 +159,8 @@ report  [Prefix]_[EntityName]
         PrintDate = 'Print Date';
         CustomerNo = 'Customer No.';
         CustomerName = 'Customer Name';
-        TotalRatingsLabel = 'Total Ratings';
-        AverageRatingLabel = 'Average Rating';
+        TotalRatingsLbl = 'Total Ratings';
+        AverageRatingLbl = 'Average Rating';
     }
 
     trigger OnInitReport()
@@ -244,20 +244,20 @@ report [ObjectID] [Prefix]Update[EntityName]
 
             trigger OnPostDataItem()
             var
-                PreviewTxt: label 'Preview completed. %1 [EntityName]s would be updated.',comments= '%1 = Number of [EntityName]s to be updated in preview mode.';
-                ProcessedTxt: label 'Process completed. %1 [EntityName]s updated out of %2 processed.',comments= '%1 = Number of [EntityName]s updated, %2 = Number of [EntityName]s processed.';
+                PreviewMsg: label 'Preview completed. %1 [EntityName]s would be updated.',comments= '%1 = Number of [EntityName]s to be updated in preview mode.';
+                ProcessedMsg: label 'Process completed. %1 [EntityName]s updated out of %2 processed.',comments= '%1 = Number of [EntityName]s updated, %2 = Number of [EntityName]s processed.';
             begin
                 Window.Close();
                 
                 if PreviewMode then
-                    Message(PreviewTxt, CustomersToUpdate)
+                    Message(PreviewMsg, CustomersToUpdate)
                 else
-                    Message(ProcessedTxt, CustomersUpdated, CustomersProcessed);
+                    Message(ProcessedMsg, CustomersUpdated, CustomersProcessed);
             end;
 
             trigger OnPreDataItem()
             var
-                ProgressText: label 'Processing Customers...\' +
+                ProgressTxt: label 'Processing Customers...\' +
                                     'Progress: #1########## %\' +
                                     'Current Customer: #2##########',
                                     comments= '%1 = Progress percentage, %2 = Current Customer No.';
@@ -267,7 +267,7 @@ report [ObjectID] [Prefix]Update[EntityName]
                 CustomersUpdated := 0;
                 CustomersToUpdate := 0;
 
-                Window.Open(ProgressText);
+                Window.Open(ProgressTxt);
             end;
         }
     }

@@ -17,7 +17,7 @@ In the sections bellow, we describe some rules, best pratices and examples havin
   - complies with good designs
   - has high maintainability
 - [Performance](./Performance/) This section will cover the performance subjects of an AL extensions.
-- [Examples](./Examples/) This section will give some good code example.
+- [Templates](./Templates/) This section will give some good code templates.
 
 ## AI Assistant Guidelines for AL Development
 ### Code Quality and Standards
@@ -28,7 +28,7 @@ In the sections bellow, we describe some rules, best pratices and examples havin
 ### Project Structure
 - **Respect Existing Architecture**: Follow the existing architectural patterns and design principles in the codebase.
 - **Use Proper Object IDs**: When creating new objects, use the appropriate ID ranges as defined in the project.
-- **Maintain Object Naming Conventions**: Follow the established naming conventions for objects, including the required prefix "NALICF".
+- **Maintain Object Naming Conventions**: Follow the established naming conventions for objects, including the required prefix.
 ### Implementation Guidelines
 - **Centralized Utilities**: Use centralized utility codeunits when available instead of duplicating functionality.
 - **Error Handling**: Implement proper error handling with descriptive error messages.
@@ -41,3 +41,5 @@ In the sections bellow, we describe some rules, best pratices and examples havin
 - **Document Decisions**: Document any significant decisions or trade-offs made during implementation.
 
 By following these instructions, you'll contribute high-quality, maintainable code to the project.
+
+[🏠 Home](../../readme.md)

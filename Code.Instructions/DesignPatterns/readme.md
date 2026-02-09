@@ -7,3 +7,5 @@ Code Design Patterns:
 - [General Design Patterns](./General.md)
 - [Interfaces](./Interfaces.md)
 - [Project Structure Rules](./ProjectStructureRules.md)
+
+[🏠 Home](../../readme.md) | [Code Instructions](../readme.md)

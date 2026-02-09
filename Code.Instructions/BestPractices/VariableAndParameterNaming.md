@@ -6,7 +6,7 @@
 - Be consistent with naming patterns throughout the codebase
 - Blanks, periods, and other characters (such as parentheses) that would make quotation marks around a variable necessary must be omitted.
 
-### Record Variables
+## Record Variables
 - Names of variables and parameters of type `Record` should be suffixed with the table name without whitespaces.
 - For multiple variables of the same record type, use meaningful suffixes.
 - Use prefix 'Temp' for temporary records
@@ -56,7 +56,7 @@ begin
 end;
 ```
 
-### Page Variables
+## Page Variables
 - Names of variables and parameters of type `Page` should be suffixed with the page name without whitespaces
 ### ❌ Bad code
 ```al
@@ -67,7 +67,16 @@ JobPage: Page Job;
 JobPage: Page Job;
 ```
 
-### Multiple Variables of Same Type
+## Text constants
+The names of variables of type label must contain the following suffixes:
+- Err for an error
+- Msg for a message
+- Qst for StrMenu and Confirm
+- Lbl for Labels and Captions
+- Txt for text
+- Tok for a token
+
+## Multiple Variables of Same Type
 - If there is a need for multiple variables or parameters of the same type, the name must be suffixed with a meaningful name
 - the variables are separated by colon and a space before the type declaration
 ### ❌ Bad code
@@ -80,7 +89,7 @@ Customer2: Record Customer;
 CustomerNew, CustomerOld: Record Customer;
 ```
 
-### Parameter Declaration
+## Parameter Declaration
 - A parameter must only be declared as `var` if necessary (when the parameter needs to be modified)
 
 

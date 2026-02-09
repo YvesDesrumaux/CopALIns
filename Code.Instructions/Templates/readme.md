@@ -216,11 +216,13 @@ These templates leverage the latest AL features including:
 
 ## Getting Started
 
-1. **Choose the appropriate template based on your development scenario
-2. **Copy the template file to your AL project directory
-3. **Replace all placeholders with your specific values
-4. **Customize business logic according to your requirements
-5. **Test thoroughly using the test template patterns
-6. **Review compliance with SharedGuidelines standards
+- Choose the appropriate template based on your development scenario
+- Copy the template file to your AL project directory
+- Replace all placeholders with your specific values
+- Customize business logic according to your requirements
+- Test thoroughly using the test template patterns
+- Review compliance with SharedGuidelines standards
 
 These templates provide a solid foundation for AL development while ensuring consistency with the established workflow standards and Business Central best practices.
+
+[🏠 Home](../../readme.md) | [Code Instructions](../readme.md)
