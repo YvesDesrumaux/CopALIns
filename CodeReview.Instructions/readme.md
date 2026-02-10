@@ -8,17 +8,17 @@ When generating Code Review, always assume the reader is:
   - A developper
   - Looking for **how to get the best code**
 
-## Code Review files
-- Files are placed in a `.github\CodeReview` folder at the root of the repository.
-- Make files in .md format.
-- Filenaming should be `<affixe>-CodeReview-<current datetime>.md`
+## Code Review file
+- File must be placed in a `\.github\CodeReview` folder at the root of the repository.
+- Make file in .md format.
+- Filenaming should be `CodeReview-<current datetime>.md`
 
 ## Review Output Format
 Provide the review in this structure:
 
 1. **Summary**
     - Overall assessment (1–3 sentences)
-    - Overall quality: **(1 - 10)**
+    - Code Quality Score: (1-10)
     - Risk rating: **Low / Medium / High**
     - Primary themes (e.g., correctness, performance, upgradeability)
     - Quick wins (top 3)
@@ -82,7 +82,7 @@ A good AL change is:
 - Confirm key usage:
   - `SetCurrentKey` aligns with filters and intended sorting.
 - Limit record scans:
-  - Avoid `Find('-')` patterns unless justified.
+  - Avoid `Find('-')` `Find('+')` patterns unless justified.
 - Use `CalcFields` only when needed; avoid recalculating in tight loops.
 - If using temporary tables, ensure their lifetime and purpose are clear.
 
