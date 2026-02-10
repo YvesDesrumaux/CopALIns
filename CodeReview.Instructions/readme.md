@@ -8,13 +8,20 @@ When generating Code Review, always assume the reader is:
   - A developper
   - Looking for **how to get the best code**
 
+## Code Review files
+- Files are placed in a `.github\CodeReview` folder at the root of the repository.
+- Make files in .md format.
+- Filenaming should be `<affixe>-CodeReview-<current datetime>.md`
+
 ## Review Output Format
 Provide the review in this structure:
 
 1. **Summary**
-   - Overall assessment (1–3 sentences)
-   - Risk rating: **Low / Medium / High**
-   - Primary themes (e.g., correctness, performance, upgradeability)
+    - Overall assessment (1–3 sentences)
+    - Overall quality: **(1 - 10)**
+    - Risk rating: **Low / Medium / High**
+    - Primary themes (e.g., correctness, performance, upgradeability)
+    - Quick wins (top 3)
 
 2. **Must Fix (Blocking)**
    - Items that can cause incorrect results, data issues, runtime failures, security exposure, or upgrade breaks.
@@ -54,7 +61,7 @@ A good AL change is:
 
 ## Review Checklist (AL-Specific)
 
-### 1) Correctness & Business Logic
+### Correctness & Business Logic
 - Validate:
   - Field validation via `Validate()` where business logic is expected.
   - `TestField()` usage for required inputs.
@@ -66,7 +73,7 @@ A good AL change is:
   - Avoid unintended commits.
   - Use `Commit()` only when absolutely necessary and justified.
 
-### 2) Data Access & Performance
+### Data Access & Performance
 - Verify filtering order:
   - `SetRange` / `SetFilter` / `SetCurrentKey` **before** `FindSet`, `FindFirst`, `Get`.
 - Prefer efficient record retrieval:
@@ -79,13 +86,13 @@ A good AL change is:
 - Use `CalcFields` only when needed; avoid recalculating in tight loops.
 - If using temporary tables, ensure their lifetime and purpose are clear.
 
-### 3) Concurrency & Locking
+### Concurrency & Locking
 - Check for overly aggressive locking:
   - `LockTable()` only when necessary and tightly scoped.
 - Ensure correct usage of `FindSet(true)` (for update) versus `FindSet(false)` (read).
 - Avoid long-running transactions that hold locks (especially in posting/large batch operations).
 
-### 4) Events, Extensibility, and Upgrade Safety
+### Events, Extensibility, and Upgrade Safety
 - Prefer event-based extensibility:
   - Use integration/business events instead of hard dependencies when designing reusable logic.
 - Event subscribers:
@@ -94,7 +101,7 @@ A good AL change is:
 - Avoid breaking changes to public procedures and signatures.
 - Watch for tight coupling to specific object IDs/names unless required.
 
-### 5) Error Handling & UX
+### Error Handling & UX
 - Ensure error messages are:
   - Actionable, user-friendly, and localized via labels.
 - Use:
@@ -104,7 +111,7 @@ A good AL change is:
 - Avoid exposing sensitive data in errors/messages.
 - Prefer early validation and clear failure modes.
 
-### 6) Security & Permissions
+### Security & Permissions
 - Check permission model:
   - Use `AccessByPermission` on pages/actions when appropriate.
   - Ensure objects do not inadvertently provide elevated access.
@@ -113,7 +120,7 @@ A good AL change is:
   - Any export/report logic that could leak data.
 - Confirm correct use of `Permissions` property where justified (and avoid overuse).
 
-### 7) API Pages, Web Services, and Integrations (if applicable)
+### API Pages, Web Services, and Integrations (if applicable)
 - Ensure API contracts are stable:
   - Avoid changing field names/types without versioning strategy.
 - Validate:
@@ -122,7 +129,7 @@ A good AL change is:
   - Idempotency where required.
 - Confirm no business logic is bypassed via direct assignment instead of `Validate()`.
 
-### 8) Maintainability & AL Style
+### Maintainability & AL Style
 - Naming:
   - Procedures: Verb-based, clear intent.
   - Variables: descriptive; avoid single-letter names except short loops.
@@ -136,7 +143,7 @@ A good AL change is:
 - Consistency with standard BC patterns:
   - Posting routines, setup patterns, dimension handling, number series usage, etc.
 
-### 9) Testing Expectations
+### Testing Expectations
 When changes affect core business logic, ask for (or recommend) tests:
 - Add tests in a dedicated test app/codeunit.
 - Cover:
@@ -171,3 +178,4 @@ When changes affect core business logic, ask for (or recommend) tests:
   ```al
   Rec.Validate("Dependent Field", NewValue);
   ```
+  ## 
